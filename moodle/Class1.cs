@@ -145,6 +145,52 @@ namespace moodle
             }
 
         }
+        public async Task<string> UpdateUser(int id)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+
+
+                    string function = "core_user_update_users";
+
+                    client.BaseAddress = new Uri(moodleUrl);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
+
+                    Dictionary<string, string> postData = new Dictionary<string, string>
+             {
+                 { "users[0][id]", id.ToString() },
+                 { "users[0][username]", "usermodificado" },
+                 { "users[0][password]", "TtPassword123!" },
+                 { "users[0][firstname]", "modificado" },
+                 { "users[0][lastname]", "modificado" },
+             };
+
+                    FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
+
+                    HttpResponseMessage response = await client.PostAsync($"/webservice/rest/server.php?wstoken={token}&wsfunction={function}&moodlewsrestformat=json", content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return await response.Content.ReadAsStringAsync();
+
+                    }
+                    else
+                    {
+                        return response.StatusCode.ToString();
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
 
     }
 }
