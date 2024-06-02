@@ -59,5 +59,92 @@ namespace moodle
                 throw exception;
             }
         }
+
+        public async Task<string> GetUsers()
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+
+
+                    string function = "core_user_get_users";
+
+                    client.BaseAddress = new Uri(moodleUrl);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
+
+
+
+                    Dictionary<string, string> postData = new Dictionary<string, string>
+                {
+                    { "criteria[0][key]", "email" },
+                    { "criteria[0][value]", "%@%"}
+                };
+
+                    FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
+
+                    HttpResponseMessage response = await client.PostAsync($"?wstoken={token}&wsfunction={function}&moodlewsrestformat=json", content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return await response.Content.ReadAsStringAsync();
+
+                    }
+                    else
+                    {
+                        return response.StatusCode.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public async Task<string> DeleteUsersbyID(int id)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+
+                    string function = "core_user_delete_users";
+
+                    client.BaseAddress = new Uri(moodleUrl);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
+
+
+                    Dictionary<string, string> postData = new Dictionary<string, string>
+                {
+                     { "userids[0]", id.ToString() }
+                };
+
+                    FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
+
+                    HttpResponseMessage response = await client.PostAsync($"/webservice/rest/server.php?wstoken={token}&wsfunction={function}&moodlewsrestformat=json", content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return await response.Content.ReadAsStringAsync();
+
+                    }
+                    else
+                    {
+                        return response.StatusCode.ToString();
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
     }
 }
