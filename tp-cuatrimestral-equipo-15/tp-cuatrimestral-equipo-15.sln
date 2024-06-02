@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tp-cuatrimestral-equipo-15"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moodle", "..\moodle\moodle.csproj", "{606F4E17-9AD2-4891-9522-E433FD92AAD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "..\Dominio\Dominio.csproj", "{1BE68771-2578-41D7-968A-2F85FBBB6266}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{606F4E17-9AD2-4891-9522-E433FD92AAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{606F4E17-9AD2-4891-9522-E433FD92AAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{606F4E17-9AD2-4891-9522-E433FD92AAD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE68771-2578-41D7-968A-2F85FBBB6266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE68771-2578-41D7-968A-2F85FBBB6266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE68771-2578-41D7-968A-2F85FBBB6266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE68771-2578-41D7-968A-2F85FBBB6266}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
