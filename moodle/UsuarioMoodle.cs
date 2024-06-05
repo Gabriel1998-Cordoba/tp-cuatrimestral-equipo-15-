@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace moodle
 {
-    public class Moodle {
+    public class UsuarioMoodle {
         private string moodleUrl = "http://localhost/webservice/rest/server.php";
         private string token = "b0a4229454aeff94a9f0073a32e17031";
         
