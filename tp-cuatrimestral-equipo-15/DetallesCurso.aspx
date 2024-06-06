@@ -32,7 +32,7 @@
               <li class="list-group-item">Ejemplos paso a paso</li>
               <li class="list-group-item">Recursos seleccionados para su lectura</li>
               <li class="list-group-item">Canales de consulta</li>
-              <li class="list-group-item">Vivos esporádicos a coordinar para consultas varias</li>
+              <li class="list-group-item">Vivos esporádicos a coordinar para consultas varias.</li>
             </ul>
         </div>
 </div>
