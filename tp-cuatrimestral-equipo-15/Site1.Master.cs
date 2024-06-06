@@ -11,7 +11,25 @@ namespace tp_cuatrimestral_equipo_15
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                Session["Theme"] = "light";
+                btnTheme.Text = "🌙";
+            }
+        }
 
+        protected void btnTheme_Click(object sender, EventArgs e)
+        {
+            if ((string)Session["Theme"] == "light")
+            {
+                Session["Theme"] = "dark";
+                btnTheme.Text = "☀️";
+            }
+            else if ((string)Session["Theme"] == "dark")
+            {
+                Session["Theme"] = "light";
+                btnTheme.Text = "🌙";
+            }
         }
     }
 }

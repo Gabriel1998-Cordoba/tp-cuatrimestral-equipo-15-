@@ -80,6 +80,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="DetallesCurso.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Perfil.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -91,6 +92,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetallesCurso.aspx.cs">
+      <DependentUpon>DetallesCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallesCurso.aspx.designer.cs">
+      <DependentUpon>DetallesCurso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
