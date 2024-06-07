@@ -4,16 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{606F4E17-9AD2-4891-9522-E433FD92AAD3}</ProjectGuid>
+    <ProjectGuid>{240EAE19-A9DD-4DD9-810A-7225F3232541}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>moodle</RootNamespace>
-    <AssemblyName>moodle</AssemblyName>
+    <RootNamespace>Moodle</RootNamespace>
+    <AssemblyName>Moodle</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\tp-cuatrimestral-equipo-15\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,64 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UsuarioMoodle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Content\bootstrap-grid.css.map" />
-    <None Include="Content\bootstrap-grid.min.css.map" />
-    <None Include="Content\bootstrap-grid.rtl.css.map" />
-    <None Include="Content\bootstrap-grid.rtl.min.css.map" />
-    <None Include="Content\bootstrap-reboot.css.map" />
-    <None Include="Content\bootstrap-reboot.min.css.map" />
-    <None Include="Content\bootstrap-reboot.rtl.css.map" />
-    <None Include="Content\bootstrap-reboot.rtl.min.css.map" />
-    <None Include="Content\bootstrap-utilities.css.map" />
-    <None Include="Content\bootstrap-utilities.min.css.map" />
-    <None Include="Content\bootstrap-utilities.rtl.css.map" />
-    <None Include="Content\bootstrap-utilities.rtl.min.css.map" />
-    <None Include="Content\bootstrap.css.map" />
-    <None Include="Content\bootstrap.min.css.map" />
-    <None Include="Content\bootstrap.rtl.css.map" />
-    <None Include="Content\bootstrap.rtl.min.css.map" />
-    <None Include="packages.config" />
-    <None Include="Scripts\bootstrap.bundle.js.map" />
-    <None Include="Scripts\bootstrap.bundle.min.js.map" />
-    <None Include="Scripts\bootstrap.esm.js.map" />
-    <None Include="Scripts\bootstrap.esm.min.js.map" />
-    <None Include="Scripts\bootstrap.js.map" />
-    <None Include="Scripts\bootstrap.min.js.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-grid.rtl.css" />
-    <Content Include="Content\bootstrap-grid.rtl.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap-reboot.rtl.css" />
-    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
-    <Content Include="Content\bootstrap-utilities.css" />
-    <Content Include="Content\bootstrap-utilities.min.css" />
-    <Content Include="Content\bootstrap-utilities.rtl.css" />
-    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrap.rtl.css" />
-    <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.esm.js" />
-    <Content Include="Scripts\bootstrap.esm.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Compile Include="UsuarioMoodle.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\tp-cuatrimestral-equipo-15\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\tp-cuatrimestral-equipo-15\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\tp-cuatrimestral-equipo-15\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\tp-cuatrimestral-equipo-15\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
-  </Target>
 </Project>

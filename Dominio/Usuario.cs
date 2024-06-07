@@ -12,7 +12,6 @@ namespace Dominio
         public string Nombre { get; set; }
         public string Contraseña { get; set; }
         public string Email { get; set; }
-        public List<Curso> listaCursos { get; set; }
         public bool TipoUsuario { get; set; }
 
     }
