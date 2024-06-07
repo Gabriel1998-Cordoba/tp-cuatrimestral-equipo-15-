@@ -36,7 +36,7 @@
           
      </div>
   </div>  
-<div class="container row justify-content-center" style="margin:20px;  padding:20px">
+<%--<div class="container row justify-content-center" style="margin:20px;  padding:20px">
 
         <div class="col-md-5" style="padding:20px; text-align:center">
             <h2 class="display-5  text-body-emphasis">¡Este curso es para vos!</h2>
@@ -53,7 +53,7 @@
               <li class="list-group-item">Vivos esporádicos a coordinar para consultas varias.</li>
             </ul>
         </div>
-</div>
+</div>--%>
 
 <div class="container row justify-content-center" style="margin:20px; margin-top:50px">
 

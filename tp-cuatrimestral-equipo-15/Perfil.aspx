@@ -21,7 +21,7 @@
              </div>
              <div class="mb-3">
                  <label class="form-label">Email</label>
-                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" ></asp:TextBox>
              </div>
          </div>
 

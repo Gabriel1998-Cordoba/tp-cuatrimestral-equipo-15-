@@ -6,14 +6,22 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-  public class Curso
+    public class Curso
     {
         public int ID { get; set; }
+
+        public int IdMoodle { get; set; }
 
         public string Nombre { get; set; }
 
         public string Descripcion { get; set; }
 
         public string UrlPortada { get; set; }
+
+        public string UrlPrograma { get; set; }
+
+        public float Precio { get; set; }
+
+        public bool Visible { get; set; }
     }
 }
