@@ -20,7 +20,7 @@ namespace Dominio
 
         public string UrlPrograma { get; set; }
 
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
 
         public bool Visible { get; set; }
     }
