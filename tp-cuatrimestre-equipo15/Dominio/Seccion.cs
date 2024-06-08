@@ -8,6 +8,7 @@ namespace Dominio
 {
     public class Seccion
     {
+        public int ID { get; set; }
         public int NumSeccion { get; set; }
 
         public int IdCurso { get; set; }

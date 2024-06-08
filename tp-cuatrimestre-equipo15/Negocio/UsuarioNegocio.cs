@@ -50,7 +50,7 @@ namespace Negocio
             try
             {
                 accesoDatos.setearConsulta(
-                    "INSERT INTO ARTICULOS (NombreUsuario,Email,Contrasenia, Tipo) "  +
+                    "INSERT INTO Usuarios (NombreUsuario,Email,Contrasenia, Tipo) " +
                     "VALUES (@NombreUsuario, @Email, @Contrasenia, @Tipo)"
                 );
                
@@ -74,7 +74,7 @@ namespace Negocio
         {
             try
             {
-                accesoDatos.setearConsulta("UPDATE ARTICULOS SET NombreUsuario=@NombreUsuario, Email=@Email,Contrasenia=@Contrasenia,Tipo=@Tipo WHERE ID =" + usuario.ID);
+                accesoDatos.setearConsulta("UPDATE Usuarios SET NombreUsuario=@NombreUsuario, Email=@Email,Contrasenia=@Contrasenia,Tipo=@Tipo WHERE ID =" + usuario.ID);
 
                 accesoDatos.setearParametros("@NombreUsuario", usuario.Nombre);
                 accesoDatos.setearParametros("@Email", usuario.Email);
@@ -92,6 +92,18 @@ namespace Negocio
                 accesoDatos.cerrarConexion();
             }
         }
-
+        public void eliminar(Usuario usuario)
+        {
+            try
+            {
+                accesoDatos.setearConsulta("DELETE FROM Usuarios WHERE ID = @ID");
+                accesoDatos.setearParametros("@ID", usuario.ID);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
     }
 }

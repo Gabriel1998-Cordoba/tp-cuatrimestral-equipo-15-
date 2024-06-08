@@ -98,6 +98,18 @@ namespace Negocio
                 accesoDatos.cerrarConexion();
             }
         }
-
+        public void eliminar(Curso curso)
+        {
+            try
+            {
+                accesoDatos.setearConsulta("DELETE FROM Cursos WHERE ID = @Codigo");
+                accesoDatos.setearParametros("@ID", curso.ID);
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
     }
 }
